@@ -1,0 +1,15 @@
+<div class="card {{weather.time_of_day}}">
+  <div class="delete-wrapper">
+    <form action="/delete" method="POST">
+      <input type="hidden" name="id" value="{{weather.city}}">
+      <button class="delete-button" type="submit">&#10006;</button>
+    </form>
+  </div>
+  <div class="degrees"><span>{{weather.degrees}}<span class="celsius"> °C</span></span></div>
+  <div class="state">{{weather.state}}</div>
+  <div class="state">
+    <img src="http://openweathermap.org/img/wn/{{weather.icon_code}}.png" alt="">
+  </div>
+  <div class="city">{{weather.city}}</div>
+  <div class="city country">{{weather.country}}</div>
+</div>
