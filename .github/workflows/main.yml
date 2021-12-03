@@ -22,6 +22,11 @@ jobs:
           python -m pip install --upgrade pip
           pip install flake8 pytest
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+      - name: Deploy
+        uses: Disday/Weather-Cards@main
+        with:
+          branch: gh-pages # The branch the action should deploy to.
+          folder: build # The folder the action should deploy.
           
 #       - name: Lint with flake8
 #         run: |
